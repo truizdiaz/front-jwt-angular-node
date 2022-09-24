@@ -9,14 +9,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Coca cola</td>
-            <td>Bebida con azucar</td>
+          <tr *ngFor="let item of listProduct">
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }} </td>
           </tr>
-          <tr>
-            <td>Sibarita</td>
-            <td>Pizza de 700 gramos</td>
-          </tr>
+         
         </tbody>
       </table>
 </div>

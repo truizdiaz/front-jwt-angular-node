@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -7,6 +8,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  listProduct: Product[] = []
 
   constructor(private _productService: ProductService) { }
 
@@ -16,7 +18,7 @@ export class DashboardComponent implements OnInit {
 
   getProducts() {
     this._productService.getProducts().subscribe(data => {
-      console.log(data);
+      this.listProduct = data;
     })
   }
 
