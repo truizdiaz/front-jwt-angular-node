@@ -3,19 +3,19 @@
         <img class="logo" src="../../../assets/img/login.png" alt="img login">
         <h3>Registrar Usuario</h3>
         <div class="form-floating mb-3 mt-3">
-            <input type="text" class="form-control" placeholder="Ingrese usuario">
+            <input type="text" [(ngModel)]="username" class="form-control" placeholder="Ingrese usuario">
             <label>Usuario</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" placeholder="Ingrese password">
+            <input type="password" [(ngModel)]="password" class="form-control" placeholder="Ingrese password">
             <label>Password</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" placeholder="Ingrese password de nuevo">
+            <input type="password" [(ngModel)]="confirmPassword" class="form-control" placeholder="Ingrese password de nuevo">
             <label>Repetir Password</label>
         </div>
         <div class="d-grid gap-2 mb-3">
-            <button type="button" class="btn btn-primary btn-lg" routerLink="/dashboard">Aceptar</button>
+            <button type="button" (click)="addUser()" class="btn btn-primary btn-lg">Aceptar</button>
         </div>
         <a routerLink="/login">Volver</a>
     </div>
