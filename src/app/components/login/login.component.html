@@ -1,7 +1,7 @@
 <div class="wrapper">
     <div class="body">
         <img class="logo" src="../../../assets/img/login.png" alt="img login">
-        <h1>Login</h1>
+        <h3 class="mb-2">Login</h3>
         <div class="form-floating mb-3">
             <input type="text" class="form-control" placeholder="Ingrese usuario">
             <label>Usuario</label>
@@ -11,8 +11,8 @@
             <label>Password</label>
         </div>
         <div class="d-grid gap-2">
-            <button type="button" class="btn btn-primary btn-lg">Aceptar</button>
+            <button type="button" class="btn btn-primary btn-lg" routerLink="/dashboard">Aceptar</button>
         </div>
-        <p class="mt-3">No tienes cuenta? <a href="">Registrar</a></p>
+        <p class="mt-3">No tienes cuenta? <a routerLink="/signIn">Registrar</a></p>
     </div>
 </div>
