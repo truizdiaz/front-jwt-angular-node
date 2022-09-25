@@ -27,7 +27,7 @@ export class AddTokenInterceptor implements HttpInterceptor {
           this._errorService.msjError(error)
           this.router.navigate(['/login'])
         }
-        return throwError(() => new Error('Error'))
+        return throwError(() => error);
       })
     );
   }
